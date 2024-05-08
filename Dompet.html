@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Universitas Udayana </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <body> 
+    <ul class="Informasi">
+    <h1>FIN U</h1>
+    <script>
+      // Mencetak pop-up notifikasi: 
+      function cetakNamaAnggota() {
+        let anggotaKelompok = [
+          ["Kelompok 4", ["Yoel", "nova", "dipa", "azahrah", "Yuni", "Wigati", "Alsya"  ]]
+        ];
+
+
+        let anggotaText = "";
+        for (let i = 0; i < anggotaKelompok.length; i++) {
+          anggotaText += `**${anggotaKelompok[i][0]}**\n`;
+          for (let j = 0; j < anggotaKelompok[i][1].length; j++) {
+            anggotaText += `- ${anggotaKelompok[i][1][j]}\n`;
+          }
+          anggotaText += "\n";
+        }
+
+        alert(anggotaText);
+      }
+
+      // Mencetak di konsol: jurusan dan kampus anggota kelompok
+      function cetakJurusanKampus() {
+        let anggotaKelompok = [
+          ["Kelompok 4", ["Yoel (Sistem Informasi, Universitas Airlangga)", "Azahra (Ilmu Komunikasi, Universitas kebangsaan republik Indonesia)", "Wigati (Akuntansi, Politeknik Negeri Tanah Laut)", "Alsya (Matematika, Universitas Paulang)", "Dipa (Akuntansi, Univeritasi Udayana)", "Nova (teknik industri, Universitas Malikussaleh)", "Sulis (manajemen, Universitas sains Alquran)", "Yuni (Akuntansi, universitas bina sarana informatika)"]] 
+          ];
+
+        let jurusanKampusText = "";
+        for (let i = 0; i < anggotaKelompok.length; i++) {
+          jurusanKampusText += `**${anggotaKelompok[i][0]}**\n`;
+          for (let j = 0; j < anggotaKelompok[i][1].length; j++) {
+            jurusanKampusText += `- ${anggotaKelompok[i][1][j]}\n`;
+          }
+          jurusanKampusText += "\n";
+        }
+
+        console.log(jurusanKampusText);
+      }
+
+// Menghitung Harga Akhir
+			function hitungHargaAkhir() {
+  const hargaAwal = parseFloat(document.getElementById('hargaAwal').value);
+
+  let diskon = 0;
+  if (hargaAwal < 1000000) {
+    diskon = 0;
+  } else if (hargaAwal < 10000000) {
+    diskon = 0.2;
+  } else {
+    diskon = 0.5;
+  }
+
+  const hargaDiskon = hargaAwal * diskon;
+  const hargaAkhir = hargaAwal - hargaDiskon;
+
+  document.getElementById('hargaAkhirOutput').innerHTML = `
+    Harga Akhir: Rp${hargaAkhir.toFixed(2)}
+  `;
+}
+    </script>
+
+    <button onclick="cetakNamaAnggota()">Tampilkan Nama Anggota</button>
+    <button onclick="cetakJurusanKampus()">Tampilkan Jurusan dan Asal Kampus</button>
+    
+    <h1>Hitung Harga Akhir</h1>
+
+  <label for="hargaAwal">Harga Awal:</label>
+  <input type="number" id="hargaAwal" min="0" required>
+
+  <button onclick="hitungHargaAkhir()">Hitung Harga Akhir</button>
+
+  <p id="hargaAkhirOutput"></p>
+</ul>
+  
+  </body>
+<body>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="Halaman.html">
+            <i class="fa fa-home nav-icon"></i>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="Pesan.html">
+            <i class="fa fa-message nav-icon"></i>
+            <span class="nav-text">Pesan</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="Keranjang.html">
+            <i class="fa fa-cart-plus nav-icon"></i>
+            <span class="nav-text">Keranjang</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="Dompet.html">
+            <i class="fa fa-wallet nav-icon"></i>
+            <span class="nav-text">Dompet</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="logout">
+
+        <li>
+          <a href="Login.html">
+            <i class="fa fa-right-from-bracket nav-icon"></i>
+            <span class="nav-text">
+              Logout
+            </span>
+          </a>
+        </li>  
+      </ul>
+   </nav>
+    
+   <section>
+    <div class="card">
+      <img src="saham.png" alt="image" />
+
+      <div class="card-content">
+        <p>Saham Milenial</p>
+        <p>mari mahasiswa mulai memahami investasi saham dan membangun masa depan yang cerah.</p>
+        <a href="Investasi/dist/Investasi.html"><button class="btn">Lebih lanjut</button></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="udana.jpg" alt="image" />
+      <div class="card-content">
+        <p>U Dana</p>
+        <p>Dengan disiplin dan pengetahuan yang tepat, mahasiswa dapat mengelola uang mereka dengan bijaksana dan meraih kesuksesan finansial di kemudian hari..</p>
+        <a href="Investasi/dist/Investasi2.html"><button class="btn">Lebih lanjut</button></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="arisan.png" alt="image" />
+
+      <div class="card-content">
+        <p>Arisan</p>
+        <p>Dalam arisan, kita belajar tentang kerjasama, disiplin, dan menghargai setiap kontribusi.</p>
+        <a href="Investasi/dist/Investasi3.html"><button class="btn">Lebih lanjut</button></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+
+
+</body>
+</html>
